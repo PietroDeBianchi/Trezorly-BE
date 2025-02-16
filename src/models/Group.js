@@ -3,12 +3,12 @@ const { Schema } = mongoose;
 
 const groupSchema = new Schema(
     {
-        nome_gruppo: {
+        group_name: {
             type: String,
             required: true,
             trim: true,
         },
-        descrizione: {
+        description: {
             type: String,
             trim: true,
             default: null,
@@ -20,7 +20,7 @@ const groupSchema = new Schema(
                 autopopulate: true,
             },
         ],
-        data_creazione: {
+        createdAt: {
             type: Date,
             default: Date.now,
         },

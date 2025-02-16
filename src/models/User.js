@@ -31,7 +31,8 @@ const userSchema = new Schema(
         },
         is_Verified: {
             type: Boolean,
-            default: false,
+            // TODO : Change to false when getVerify is ready
+            default: true,
         },
         role: {
             type: String,

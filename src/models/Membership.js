@@ -9,7 +9,7 @@ const membershipSchema = new Schema(
             required: true,
             autopopulate: false,
         },
-        utente_id: {
+        user_id: {
             type: Schema.Types.ObjectId,
             ref: 'Users',
             required: true,
@@ -24,10 +24,6 @@ const membershipSchema = new Schema(
         is_admin: {
             type: Boolean,
             default: false,
-        },
-        data_aggiunta: {
-            type: Date,
-            default: Date.now,
         },
         deletedAt: {
             type: Date,
