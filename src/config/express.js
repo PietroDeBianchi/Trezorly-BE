@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const routes = require('../routes/index');
 
 /**
  * Express instance
@@ -30,6 +31,6 @@ app.use(helmet());
 app.use(cors({ credentials: true, origin: true }));
 
 // mount api v1 routes
-//app.use('/api/v1', routes);
+app.use('/api/v1', routes);
 
 module.exports = app;
