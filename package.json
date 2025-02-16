@@ -8,7 +8,8 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "scaffold": "node src/utils/scaffold-viewer.js",
+    "scaffold": "node src/utils/terminal/scaffold-viewer.js",
+    "api-list": "node src/utils/terminal/list-endpoints.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -19,8 +20,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-list-endpoints": "^7.1.1",
     "helmet": "^8.0.0",
     "mongoose": "^8.10.1",
+    "mongoose-autopopulate": "^1.1.0",
     "morgan": "^1.10.0",
     "stripe": "^17.6.0"
   },
