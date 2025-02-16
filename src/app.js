@@ -1,6 +1,6 @@
 // REQUIRES PACKAGE
 require('dotenv').config();
-const express = require('express');
+const app = require('./config/express');
 const colors = require("colors");
 
 // REQUIRES IMPORTS
@@ -8,16 +8,10 @@ const connectDB = require("./config/db");
 
 // CONST
 const PORT = process.env.PORT || 3000;
-const V = process.env.API_VERSION || 'v1';
 const PROJECT_NAME = process.env.PROJECT_NAME || '';
 
-// APP
-const app = express();
-app.use(express.json());
-
-
 // START
-const logStartupMessage = async () => {
+const startApp = async () => {
     console.log("=".repeat(50).blue);
     console.log(`🚀 Project: ${PROJECT_NAME}`.green);
     console.log(`🌐 Server running on port: ${PORT}`.green);
@@ -31,5 +25,5 @@ const logStartupMessage = async () => {
 
 // Start the server
 app.listen(PORT, () => {
-    logStartupMessage();
+    startApp();
 });
