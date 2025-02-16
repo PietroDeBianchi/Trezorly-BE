@@ -16,7 +16,7 @@ const groupSchema = new Schema(
         memberships: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'memberships',
+                ref: 'Memberships',
                 autopopulate: true,
             },
         ],
@@ -37,4 +37,4 @@ const groupSchema = new Schema(
 
 groupSchema.plugin(require('mongoose-autopopulate'));
 
-module.exports = mongoose.model('groups', groupSchema);
+module.exports = mongoose.model('Groups', groupSchema);

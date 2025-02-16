@@ -5,13 +5,13 @@ const transactionSchema = new Schema(
     {
         membership_id: {
             type: Schema.Types.ObjectId,
-            ref: 'membershpis',
+            ref: 'Membershpis',
             required: false,
             autopopulate: true,
         },
         shared_account_id: {
             type: Schema.Types.ObjectId,
-            ref: 'shared_accounts',
+            ref: 'Shared_accounts',
             required: false,
             autopopulate: true,
         },
@@ -59,4 +59,4 @@ const transactionSchema = new Schema(
     }
 );
 
-module.exports = mongoose.model('transactions', transactionSchema);
+module.exports = mongoose.model('Transactions', transactionSchema);

@@ -1,5 +1,14 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+
+// Requires models
+require('../models/Group');
+require('../models/Membership');
+require('../models/SharedAccount');
+require('../models/Transaction');
+require('../models/User');
+require('../models/VirtualCard');
+
 // Load environment variables from .env file
 dotenv.config();
 

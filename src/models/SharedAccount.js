@@ -10,7 +10,7 @@ const sharedAccountSchema = new Schema(
         },
         gruppo_id: {
             type: Schema.Types.ObjectId,
-            ref: 'groups',
+            ref: 'Groups',
             required: true,
             autopopulate: false,
         },
@@ -36,4 +36,4 @@ const sharedAccountSchema = new Schema(
 
 sharedAccountSchema.plugin(require('mongoose-autopopulate'));
 
-module.exports = mongoose.model('shared_accounts', sharedAccountSchema);
+module.exports = mongoose.model('Shared_accounts', sharedAccountSchema);

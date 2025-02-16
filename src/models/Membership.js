@@ -5,19 +5,19 @@ const membershipSchema = new Schema(
     {
         gruppo_id: {
             type: Schema.Types.ObjectId,
-            ref: 'groups',
+            ref: 'Groups',
             required: true,
             autopopulate: false,
         },
         utente_id: {
             type: Schema.Types.ObjectId,
-            ref: 'users',
+            ref: 'Users',
             required: true,
             autopopulate: false,
         },
         card_id: {
             type: Schema.Types.ObjectId,
-            ref: 'virtual_cards',
+            ref: 'Virtual_cards',
             required: false,
             autopopulate: false,
         },
@@ -42,4 +42,4 @@ const membershipSchema = new Schema(
 
 membershipSchema.plugin(require('mongoose-autopopulate'));
 
-module.exports = mongoose.model('memberships', membershipSchema);
+module.exports = mongoose.model('Memberships', membershipSchema);

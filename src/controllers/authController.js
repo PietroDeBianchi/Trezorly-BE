@@ -6,9 +6,12 @@ const AuthController = {
     // REGISTER
     async register(req, res) {
         try {
-            const { name, email, password } = req.body;
+            const { name, lastname, email, password } = req.body;
+            const user = await User.findOne({ email });
+            if (user)
+                return res.status(404).json({ error: "Email già esistente" });
             const hashedPassword = await bcrypt.hash(password, 10);
-            const newUser = new User({ name, email, password: hashedPassword });
+            const newUser = new User({ name, lastname, email, password: hashedPassword });
             await newUser.save();
             res.status(201).json({
                 message: "Utente creato con successo!",

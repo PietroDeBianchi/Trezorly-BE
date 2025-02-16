@@ -5,7 +5,7 @@ const virtualCardSchema = new Schema(
     {
         membership_id: {
             type: Schema.Types.ObjectId,
-            ref: 'memberships',
+            ref: 'Memberships',
             required: true,
             autopopulate: true,
         },
@@ -44,4 +44,4 @@ const virtualCardSchema = new Schema(
 
 virtualCardSchema.plugin(require('mongoose-autopopulate'));
 
-module.exports = mongoose.model('virtual_cards', virtualCardSchema);
+module.exports = mongoose.model('Virtual_cards', virtualCardSchema);

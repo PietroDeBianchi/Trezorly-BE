@@ -20,7 +20,7 @@ const userSchema = new Schema(
             trim: true,
             lowercase: true,
         },
-        password_hash: {
+        password: {
             type: String,
             required: true,
         },
@@ -28,10 +28,6 @@ const userSchema = new Schema(
             type: String,
             trim: true,
             default: null,
-        },
-        registration_date: {
-            type: Date,
-            default: Date.now,
         },
         is_Verified: {
             type: Boolean,
@@ -45,7 +41,7 @@ const userSchema = new Schema(
         memberships: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'memberships',
+                ref: 'Memberships',
                 autopopulate: true,
             },
         ],
@@ -62,4 +58,4 @@ const userSchema = new Schema(
 
 userSchema.plugin(require('mongoose-autopopulate'));
 
-module.exports = mongoose.model('users', userSchema);
+module.exports = mongoose.model('Users', userSchema);

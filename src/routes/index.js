@@ -1,7 +1,7 @@
 const express = require('express');
 
-const crudRoutes = require('./crud.routes.js');
-const authRoutes = require('./auth.routes.js');
+const crudRoutes = require('./crudRoutes.js');
+const authRoutes = require('./authRoute.js');
 
 const router = express.Router();
 
