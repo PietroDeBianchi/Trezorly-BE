@@ -3,15 +3,17 @@ const { Schema } = mongoose;
 
 const transactionSchema = new Schema(
     {
-        card_id: {
+        membership_id: {
             type: Schema.Types.ObjectId,
-            ref: 'virtual_cards',
-            required: true,
+            ref: 'membershpis',
+            required: false,
+            autopopulate: true,
         },
-        utente_id: {
+        shared_account_id: {
             type: Schema.Types.ObjectId,
-            ref: 'users',
-            required: true,
+            ref: 'shared_accounts',
+            required: false,
+            autopopulate: true,
         },
         importo: {
             type: Number,

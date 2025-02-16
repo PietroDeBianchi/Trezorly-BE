@@ -12,7 +12,7 @@ const sharedAccountSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'groups',
             required: true,
-            autopopulate: true,
+            autopopulate: false,
         },
         saldo: {
             type: Number,

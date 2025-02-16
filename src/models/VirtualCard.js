@@ -3,9 +3,9 @@ const { Schema } = mongoose;
 
 const virtualCardSchema = new Schema(
     {
-        conto_id: {
+        membership_id: {
             type: Schema.Types.ObjectId,
-            ref: 'shared_accounts',
+            ref: 'memberships',
             required: true,
             autopopulate: true,
         },

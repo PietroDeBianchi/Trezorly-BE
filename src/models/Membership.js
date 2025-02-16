@@ -18,7 +18,7 @@ const membershipSchema = new Schema(
         card_id: {
             type: Schema.Types.ObjectId,
             ref: 'virtual_cards',
-            required: true,
+            required: false,
             autopopulate: false,
         },
         is_admin: {

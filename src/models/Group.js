@@ -13,17 +13,11 @@ const groupSchema = new Schema(
             trim: true,
             default: null,
         },
-        creatore_id: {
-            type: Schema.Types.ObjectId,
-            ref: 'users',
-            required: true,
-            autopopulate: true,
-        },
         memberships: [
             {
                 type: Schema.Types.ObjectId,
                 ref: 'memberships',
-                autopopulate: false,
+                autopopulate: true,
             },
         ],
         data_creazione: {
