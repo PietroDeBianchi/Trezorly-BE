@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const crudCtrl = require('../controllers/CrudController.js');
+const crudCtrl = require('../controllers/crudController.js');
 
 //================================================================================
 // GENERIC ROUTE METHODS

@@ -3,12 +3,12 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema(
     {
-        nome: {
+        name: {
             type: String,
             required: true,
             trim: true,
         },
-        cognome: {
+        lastname: {
             type: String,
             required: true,
             trim: true,
@@ -24,20 +24,20 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        telefono: {
+        phone: {
             type: String,
             trim: true,
             default: null,
         },
-        data_registrazione: {
+        registration_date: {
             type: Date,
             default: Date.now,
         },
-        stato_verifica: {
+        is_Verified: {
             type: Boolean,
             default: false,
         },
-        ruolo: {
+        role: {
             type: String,
             enum: ['user', 'admin', 'superadmin'],
             default: 'user',

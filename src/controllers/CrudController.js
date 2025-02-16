@@ -1,6 +1,3 @@
-//================================================================================
-// GENERIC CONTROLLER METHODS
-//================================================================================
 exports.getCrudObjects = async (req, res, entity) => {
     try {
         res.send("Trezorly API is running...");
