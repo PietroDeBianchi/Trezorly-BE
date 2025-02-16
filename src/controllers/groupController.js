@@ -1,31 +1,19 @@
 const Group = require("../models/Group");
-const membershipHelper = require("../helpers/membershipHelper");
+const groupHelper = require("../helpers/groupHelper");
 
 const GroupController = {
     // CREATE GROUP
     async createGroup(req, res) {
         try {
-            if (!req.user) {
+            const user_id = req.user.id;
+            if (!user_id) {
                 throw new Error("user non trovato");
             }
             const { group_name, description } = req.body;
-            if (!group_name)
-                return res.status(404).json({ error: "Nome Obbligatorio" });
-            const newGroup = new Group({
-                group_name,
-                description,
-            });
-            await newGroup.save();
-            const membership_id = await membershipHelper.createMembership(
-                req.user.id,
-                newGroup._id,
-                true,
-            );
-            if (!membership_id) {
-                throw new Error("Errore nella creazione della membership");
+            if (!group_name) {
+                throw new Error("Nome gruppo Obbligatorio");
             }
-            newGroup.memberships = membership_id;
-            await newGroup.save();
+            await groupHelper.createGroupp(group_name, description, user_id)
             res.status(201).json({
                 message: "Gruppo creato con successo",
             });

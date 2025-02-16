@@ -1,7 +1,7 @@
 const Membership = require("../models/Membership");
 const User = require("../models/User");
 
-const MembershipController = {
+const MembershipHelper = {
     // CREATE MEMBERSHIP
     async createMembership(user_id, gruppo_id, is_admin) {
         try {
@@ -27,4 +27,4 @@ const MembershipController = {
     },
 };
 
-module.exports = MembershipController;
+module.exports = MembershipHelper;
