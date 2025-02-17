@@ -1436,7 +1436,7 @@ strip-json-comments@^3.1.1:
 
 stripe@^17.6.0:
   version "17.6.0"
-  resolved "https://registry.npmjs.org/stripe/-/stripe-17.6.0.tgz"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-17.6.0.tgz#6495a42b7a20066e0d96068c362da793d684e79c"
   integrity sha512-+HB6+SManp0gSRB0dlPmXO+io18krlAe0uimXhhIkL/RG/VIRigkfoM3QDJPkqbuSW0XsA6uzsivNCJU1ELEDA==
   dependencies:
     "@types/node" ">=8.1.0"

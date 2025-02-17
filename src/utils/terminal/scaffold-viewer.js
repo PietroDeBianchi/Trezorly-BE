@@ -17,10 +17,8 @@ function printDirectoryTree(dirPath, prefix = "") {
     items.forEach((name, index) => {
         const fullPath = path.join(dirPath, name); // Full path of the current element.
         const stats = fs.statSync(fullPath); // Retrieves details of the element (file or directory).
-        
         // Determines if the current element is the last one in the list.
         const isLast = index === items.length - 1;
-
         // Creates a prefix for the current element based on its position.
         const newPrefix = prefix + (isLast ? "└── " : "├── ");
         if (stats.isDirectory()) {
