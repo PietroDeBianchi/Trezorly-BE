@@ -73,7 +73,7 @@ const GroupHelper = {
     async updateInvitation(user_id, invitation_id, status) {
         try {
             const invitation = await Invitation.findById(invitation_id);
-            if (!invitation || invitation.status === "accepted") {
+            if (!invitation || invitation.status !== "pending") {
                 return {
                     message: "Invito non trovato",
                     statusCode: 404,
